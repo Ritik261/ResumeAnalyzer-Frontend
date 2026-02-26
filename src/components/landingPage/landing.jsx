@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 function landing(){
+    const navigate = useNavigate();
     function login(){
         alert("You have login");
         window.location.href='';
@@ -13,8 +16,8 @@ function landing(){
             <div className="flex justify-between items-center px-4 py-2">
                 <div><h1 className="text-3xl font-bold">This is Landing Page</h1></div>
                 <div className="flex space-x-4">
-                    <p className="bg-amber-50 p-2 text-black rounded-ee-xl cursor-pointer" onClick={login}>Login</p>
-                    <p className="bg-amber-50 p-2 text-black rounded-ee-xl cursor-pointer" onClick={register}>Register</p>
+                    <p className="bg-amber-50 p-2 text-black rounded-ee-xl cursor-pointer" onClick={()=>navigate("/login")}>Login</p>
+                    <p className="bg-amber-50 p-2 text-black rounded-ee-xl cursor-pointer" onClick={()=>navigate("/register")}>Register</p>
                 </div>
                 
             </div>
